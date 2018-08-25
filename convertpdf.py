@@ -31,9 +31,9 @@ def convert_pdf(url):
         f.extend(filenames)
         break
     f = ["%s/%s" % (url, x) for x in f]
-    print(f)
-
     f = natsort.natsorted(f)
+    print(f)
+    
     pdf_bytes = img2pdf.convert(f, dpi=300, x=None, y=None)
     doc = open('result.pdf', 'wb')
     doc.write(pdf_bytes)
