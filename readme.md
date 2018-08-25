@@ -1,6 +1,8 @@
 # Slideshare Downloader
 
 This python script to download slide from Slideshare and converted into pdf automatically.
+Forked: Added Python3 compatibility
+
 
 ## How to setup
 
