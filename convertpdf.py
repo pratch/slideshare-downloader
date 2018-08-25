@@ -7,6 +7,7 @@ from os import listdir, walk
 from os.path import isfile, join
 
 import urllib
+import natsort
 from bs4 import BeautifulSoup
 
 CURRENT = os.path.dirname(__file__)
@@ -32,6 +33,7 @@ def convert_pdf(url):
     f = ["%s/%s" % (url, x) for x in f]
     print(f)
 
+    f = natsort.natsorted(f)
     pdf_bytes = img2pdf.convert(f, dpi=300, x=None, y=None)
     doc = open('result.pdf', 'wb')
     doc.write(pdf_bytes)

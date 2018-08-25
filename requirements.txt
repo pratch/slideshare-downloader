@@ -1,2 +1,3 @@
 img2pdf
+natsort
 beautifulsoup4
